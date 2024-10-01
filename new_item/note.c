@@ -25,4 +25,6 @@ git commit --m "提交说明"
 这种方式不用vim编辑，方便
 git commit --m "fix(note): change content"
 规范表示
+在vscode中提交：在git中，先暂存文件，再点提交，
+再在源代码管理那个框框中写一下提交说明
 */
