@@ -21,5 +21,8 @@ git commit 提交
 输入完毕后按Esc退出，按下英文键:wq表示输入完毕
 按下Enter即可
 git log 显示提交日志
-
+git commit --m "提交说明"
+这种方式不用vim编辑，方便
+git commit --m "fix(note): change content"
+规范表示
 */
