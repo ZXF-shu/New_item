@@ -25,6 +25,13 @@ git commit --m "提交说明"
 这种方式不用vim编辑，方便
 git commit --m "fix(note): change content"
 规范表示
-在vscode中提交：在git中，先暂存文件，再点提交，
-再在源代码管理那个框框中写一下提交说明
+在vscode中提交：在git中，先暂存文件，再在那个框框中写说明，然后才是提交
+直接点提交的话就输入不了描述，然后也提交不了，会卡在那里
+菜鸟教程好像有git的教程
+git reset --hard commit地址
+soft模式和mixed模式
+git branch
+git checkout
+git merge
+
 */
