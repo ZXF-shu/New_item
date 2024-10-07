@@ -9,6 +9,9 @@
                 "-g",
                 "${file}",
                 //"*.c",//当前文件夹所有的.c文件都编译
+                "-I", "D:\\third_party_library\\SDL2\\include", // 添加SDL2的include路径
+                "-L", "D:\\third_party_library\\SDL2\\lib", // 添加SDL2的lib路径
+                "-lSDL2", // 链接SDL2库
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
                 //"${fileDirname}\\all.exe"生成的可执行文件为all.exe

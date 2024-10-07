@@ -14,7 +14,12 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [],
+            "environment": [
+                {
+                    "name": "PATH",
+                    "value": "D:\\third_party_library\\SDL2\\bin;${env:PATH}" // 添加SDL2的bin目录到PATH
+                }
+            ],
             "externalConsole": false,
             "MIMode": "gdb",
             //"miDebuggerPath": "/path/to/gdb",
