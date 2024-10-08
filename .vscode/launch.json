@@ -4,7 +4,7 @@
     // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
         {
             "name": "(gdb) 启动",
             "type": "cppdbg",
@@ -14,15 +14,9 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
-            "environment": [
-                {
-                    "name": "PATH",
-                    "value": "D:\\third_party_library\\SDL2\\bin;${env:PATH}" // 添加SDL2的bin目录到PATH
-                }
-            ],
+            "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
-            //"miDebuggerPath": "/path/to/gdb",
             "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
                 {

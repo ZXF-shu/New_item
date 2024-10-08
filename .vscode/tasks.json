@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "shell",//之前是cppbuild
             "label": "C/C++: gcc.exe 生成活动文件",
             "command": "C:\\mingw64\\bin\\gcc.exe",
             "args": [
@@ -9,12 +9,17 @@
                 "-g",
                 "${file}",
                 //"*.c",//当前文件夹所有的.c文件都编译
-                "-I", "D:\\third_party_library\\SDL2\\include", // 添加SDL2的include路径
-                "-L", "D:\\third_party_library\\SDL2\\lib", // 添加SDL2的lib路径
-                "-lSDL2", // 链接SDL2库
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 //"${fileDirname}\\all.exe"生成的可执行文件为all.exe
+                //"-mwindows", // 指定为窗口应用程序
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-lSDL2_ttf",
+                "-lSDL2_mixer"
+                //添加这些后好像终于可以用f5运行调试了，这些好像和链接器有关
             ],
             "options": {
                 "cwd": "C:\\mingw64\\bin"
@@ -25,6 +30,12 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            //presetation之前是没有的
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": true
             },
             "detail": "调试器生成的任务。"
         }
