@@ -1,0 +1,45 @@
+{
+    "tasks": [
+        {
+            "type": "shell",//之前是cppbuild
+            "label": "C/C++: gcc.exe 生成所有文件",
+            "command": "C:\\mingw64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${workspaceFolder}/*.c",  // 编译工作区文件夹内所有 .c 文件
+                //"${workspaceFolder}\\*.c",//当前文件夹所有文件都编译                
+                //"*.c",//当前文件夹所有的.c文件都编译
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                //"${fileDirname}\\all.exe"生成的可执行文件为all.exe
+                //"-mwindows", // 指定为窗口应用程序
+                "-lmingw32",
+                "-lSDL2main",
+                "-lSDL2",
+                "-lSDL2_image",
+                "-lSDL2_ttf",
+                "-lSDL2_mixer"
+                //添加这些后好像终于可以用f5运行调试了，这些好像和链接器有关
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"  // 工作目录设置为项目的根目录
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            //presetation之前是没有的
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": true
+            },
+            "detail": "编译所有 C 文件的任务。"
+        }
+    ],
+    "version": "2.0.0"
+    
+}
